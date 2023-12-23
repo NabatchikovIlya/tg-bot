@@ -18,6 +18,7 @@ class ModelRequester:
             path=self.MODEL_PATH,
         )
         params = {"message": msg}
+        logging.info(f"Send request: {params}")
         response = await self._client.get(str(url), params=params)
         try:
             response.raise_for_status()
@@ -25,4 +26,5 @@ class ModelRequester:
             logging.error(f"server error: {e}")
             return "Приносим вам наши извинения, сервис временно недоступен."
         output = response.json()["message"]
+        logging.info(f"got response: {output}")
         return output

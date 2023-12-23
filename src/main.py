@@ -1,4 +1,5 @@
 import asyncio
+import logging
 
 from aiogram import Bot, Dispatcher, types
 from httpx import AsyncClient, Limits
@@ -10,6 +11,12 @@ from settings import Settings
 
 bot = Bot(token=Settings.TOKEN)
 dp = Dispatcher(bot)
+
+logging.basicConfig(
+    level="INFO",
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    force=True,
+)
 
 httpx_client = AsyncClient(
     headers={"User-Agent": "tg-bot"},

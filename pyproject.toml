@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "tg-bot"
+version = "0.1.0"
+description = ""
+authors = ["ilyanabatchikov <inabatchikov@dpkapp.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiogram = "2.15"
+environs = "*"
+fuzzywuzzy = "^0.18.0"
+httpx = "^0.26.0"
+python-dotenv = "*"
+python-levenshtein = "^0.23.0"
+yarl = "^1.9.4"
+
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

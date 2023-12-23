@@ -27,7 +27,7 @@ class Handler:
             if len(word) < 3 or abs(len(word) - len(match)) > 4:
                 continue
             if similarity >= threshold:
-                return False, "Извините, но в вашем сообщении обнаружена ненормативная лексика"
+                return False, "Извините, но в вашем сообщении обнаружена ненормативная лексика."
         return True, ""
 
     async def handle(self, seq: str) -> str:
